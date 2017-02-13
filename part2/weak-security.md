@@ -49,11 +49,11 @@ hacking pleasure!
 > and then paste/modify to include your URL.
 
 
-> Once you have this done you will also need to setup oauth on google's end here:
+> Once you have this done you will also need to setup oauth on Google's end here:
 > https://console.developers.google.com/apis/library, clicking 'Credentials'
 > and clicking 'Create credentials.'  Once you have setup your credentials,
 > you will want to update the clientId variable in:
-> /app/js/controllers/LoginController.js on line 42 to use your new oauth
+> /app/js/controllers/LoginController.js on line 42 to use your new OAuth
 > client id from Google and re-deploy it to Heroku, once completed
 > you will have the option to login with Google on the login page.  
 
