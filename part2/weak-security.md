@@ -41,6 +41,24 @@ hacking pleasure!
 > solvable! It might just take a little bit more detective work to find
 > out how an OAuth login is handled.
 
+> If you are running on Heroku and are missing the _Login with Google_
+  button but want to test all the challenges out you will want to add your
+  deployed Heroku URL to /app/js/controllers/LoginController.js.  Simply update
+  the variable: authorizedRedirectURIs on line 43 to include your URL object,
+  use your URL for both the property name and value.  You can just copy line 44
+  and then paste/modify to include your URL.  
+> Once you have this done you will also need to setup oauth on google's end here:
+  https://console.developers.google.com/apis/library, clicking 'Credentials'
+  and clicking 'Create credentials.'  Once you have setup your credentials,
+  you will want to update the clientId variable in:
+  /app/js/controllers/LoginController.js on line 42 to use your new oauth
+  client id from Google and re-deploy it to Heroku, once completed
+  you will have the option to login with Google on the login page.  
+> One thing to note, make sure that you setup
+  the redirect_uri to match your app's URL, if you for some reason have to
+  modify the redirect_uri this gets cached on Google's end and takes longer
+  than you'll want to wait to reset.
+
 #### Hints
 
 * There are essentially two ways to light up this challenge in green on
